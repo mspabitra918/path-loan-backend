@@ -50,7 +50,7 @@ export const applicationSchema = z.object({
   jobTitle: z.string().min(2).max(50),
   monthlyIncome: z.number().min(500).max(1000000),
   yearsEmployed: z.number().min(0).max(50),
-  loanAmount: z.number().min(1000).max(50000),
+  loanAmount: z.number().min(2000).max(50000),
   loanPurpose: z.enum([
     "debt-consolidation",
     "credit-card-refinancing",
