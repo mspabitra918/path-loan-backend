@@ -18,8 +18,8 @@ async function main() {
   process.env.SMTP_HOST = "smtp.test";
   process.env.SMTP_USER = "test-user";
   process.env.SMTP_PASS = "test-pass";
-  process.env.FROM_EMAIL = "hello@longlakeloans.com";
-  process.env.FROM_NAME = "LongLake Loans";
+  process.env.FROM_EMAIL = "hello@pathloans.com";
+  process.env.FROM_NAME = "Path Loans";
 
   const sent: Array<{ subject: string; html: string }> = [];
 

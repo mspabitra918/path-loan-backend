@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 
 async function initDatabase() {
-  console.log("Initializing LongLake Loans database...");
+  console.log("Initializing Path Loans database...");
   console.log(
     `Database URL: ${process.env.DATABASE_URL?.replace(/:[^@]+@/, ":****@")}`,
   );

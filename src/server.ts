@@ -37,12 +37,12 @@ app.use((_req, res, next) => {
 app.use(
   cors({
     origin: [
-      "https://admin.longlakeloans.com",
-      "https://longlakeloans.vercel.app",
-      "www.longlakeloans.com",
-      "https://longlakeloans.com",
-      "https://www.longlakeloans.com",
-      "longlakeloans.com",
+      "https://admin.pathloans.com",
+      "https://pathloans.vercel.app",
+      "www.pathloans.com",
+      "https://pathloans.com",
+      "https://www.pathloans.com",
+      "pathloans.com",
       process.env.FRONTEND_URL || "http://localhost:3000",
     ],
     credentials: true,
@@ -65,7 +65,7 @@ app.use(
   "/api/docs",
   swaggerUi.serve,
   swaggerUi.setup(openApiSpec, {
-    customSiteTitle: "LongLake Loans API",
+    customSiteTitle: "Path Loans API",
     swaggerOptions: { persistAuthorization: true },
   }),
 );
@@ -86,7 +86,7 @@ app.use(sitemapRoutes);
 app.get("/", (_req, res) => {
   res.json({
     status: "OK",
-    message: "LongLake Loans API is running",
+    message: "Path Loans API is running",
   });
 });
 
@@ -109,7 +109,7 @@ app.use(
 // Only listen when running locally (not on Vercel)
 if (!process.env.VERCEL) {
   app.listen(PORT, () => {
-    console.log(`LongLake Loans Backend running on http://localhost:${PORT}`);
+    console.log(`Path Loans Backend running on http://localhost:${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
   });
 }

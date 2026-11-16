@@ -4,7 +4,7 @@ import { promises as dns } from "dns";
 // frontend is bypassed (Postman, curl, scripts).
 //
 // The typo logic below is a copy of
-// longlakeloans-frontend/components/apply/emailSuggestion.ts — keep the two
+// pathloans-frontend/components/apply/emailSuggestion.ts — keep the two
 // in sync when adding domains.
 
 const KNOWN_DOMAINS = [
@@ -96,7 +96,8 @@ function closestKnown(domain: string): string | null {
     const maxDist = Math.min(domain.length, target.length) >= 8 ? 2 : 1;
     const dist = editDistance(domain, target);
     // With no TLD, an exact name match ("gmail") still needs ".com" added
-    if (dist <= maxDist && (dist > 0 || !hasDot)) candidates.push([known, dist]);
+    if (dist <= maxDist && (dist > 0 || !hasDot))
+      candidates.push([known, dist]);
   }
   candidates.sort((a, b) => a[1] - b[1]);
   return candidates[0]?.[0] ?? null;

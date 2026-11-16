@@ -2,7 +2,7 @@ import { z } from "zod";
 
 /**
  * The apply wizard's payload, section for section — mirrors ApplicationFormData
- * in longlakeloans-frontend/components/apply/types.ts. Types are deliberately
+ * in pathloans-frontend/components/apply/types.ts. Types are deliberately
  * loose (the client sends NaN for unanswered numbers, which JSON turns into
  * null): range and enum checks happen in applicationService before the write,
  * where they can name the offending column.
@@ -69,7 +69,9 @@ export const applicationFormSchema = z.object({
 export type ApplicationForm = z.infer<typeof applicationFormSchema>;
 
 /** True when a payload is the wizard's sectioned shape rather than a flat record. */
-export function isSectionedApplicationForm(data: Record<string, unknown>): boolean {
+export function isSectionedApplicationForm(
+  data: Record<string, unknown>,
+): boolean {
   return (
     typeof data.loan === "object" &&
     data.loan !== null &&

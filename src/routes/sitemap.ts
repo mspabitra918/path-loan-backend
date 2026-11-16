@@ -5,7 +5,7 @@ const router = Router();
 const getBaseUrl = () => {
   const configuredUrl = process.env.FRONTEND_URL || process.env.SITE_URL;
   if (!configuredUrl) {
-    return "https://www.longlakeloans.com";
+    return "https://www.pathloans.com";
   }
 
   return configuredUrl.replace(/\/$/, "");

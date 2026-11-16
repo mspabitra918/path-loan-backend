@@ -6,8 +6,8 @@ async function main() {
   process.env.SMTP_HOST = "smtp.test";
   process.env.SMTP_USER = "test-user";
   process.env.SMTP_PASS = "test-pass";
-  process.env.FROM_EMAIL = "hello@longlakeloans.com";
-  process.env.FROM_NAME = "LongLake Loans";
+  process.env.FROM_EMAIL = "hello@pathloans.com";
+  process.env.FROM_NAME = "Path Loans";
 
   const sent: Array<{ subject: string; html: string }> = [];
 
@@ -30,7 +30,7 @@ async function main() {
       },
       {
         status: "request_a_call",
-        expectedSubject: "URGENT: Please call LongLake Loans immediately",
+        expectedSubject: "URGENT: Please call Path Loans immediately",
         expectedText: "Please call us ASAP",
       },
       {
@@ -45,9 +45,8 @@ async function main() {
       },
       {
         status: "funded",
-        expectedSubject:
-          "Great News! Your LongLake Loans application is FUNDED",
-        expectedText: "Welcome to the LongLake Loans family!",
+        expectedSubject: "Great News! Your Path Loans application is FUNDED",
+        expectedText: "Welcome to the Path Loans family!",
       },
     ] as const;
 

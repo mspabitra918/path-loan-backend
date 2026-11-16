@@ -1,10 +1,10 @@
 /**
- * Shared HTML email layout + primitives for every LongLake Loans email
+ * Shared HTML email layout + primitives for every Path Loans email
  * (transactional and drip). Mirrors the frontend design system.
  */
 
 /* -------------------------------------------------------------------------- */
-/*  Design system — mirrors longlakeloans-frontend/app/globals.css             */
+/*  Design system — mirrors pathloans-frontend/app/globals.css             */
 /* -------------------------------------------------------------------------- */
 
 export const COLOR = {
@@ -28,11 +28,11 @@ export const COLOR = {
 export const FONT =
   "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif";
 
-/** Same contact details as longlakeloans-frontend/components/CompanyContact.tsx */
+/** Same contact details as pathloans-frontend/components/CompanyContact.tsx */
 export const CONTACT = {
   address: "626 Wilshire Blvd - 5th Floor, Ste 575, Los Angeles, CA 90017",
-  email: "support@longlakeloans.com",
-  website: "https://www.longlakeloans.com",
+  email: "support@pathloans.com",
+  website: "https://www.pathloans.com",
   local: { display: "(747) 202-5223", href: "tel:+17472025223" },
 } as const;
 
@@ -169,7 +169,7 @@ export function renderEmailLayout({
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                     <td width="28" height="28" align="center" valign="middle" bgcolor="${COLOR.paper}" style="width: 28px; height: 28px; background: ${COLOR.paper}; border-radius: 6px; color: ${COLOR.brand}; font-family: ${FONT}; font-size: 14px; font-weight: 700; line-height: 28px;">L</td>
-                    <td style="padding-left: 10px; color: ${COLOR.paper}; font-family: ${FONT}; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">LongLake Loans</td>
+                    <td style="padding-left: 10px; color: ${COLOR.paper}; font-family: ${FONT}; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Path Loans</td>
                   </tr>
                 </table>
               </a>
@@ -197,7 +197,7 @@ export function renderEmailLayout({
               </p>
               <p style="margin: 0 0 6px; color: ${COLOR.muted}; font-family: ${FONT}; font-size: 13px; line-height: 1.6;">${CONTACT.address}</p>
               <p style="margin: 0; color: ${COLOR.body}; font-family: ${FONT}; font-size: 13px; line-height: 1.6;">
-                <a href="${CONTACT.website}" style="${footerLink}">www.longlakeloans.com</a>
+                <a href="${CONTACT.website}" style="${footerLink}">www.pathloans.com</a>
               </p>
 
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 24px;">
@@ -205,9 +205,9 @@ export function renderEmailLayout({
                   <td style="border-top: 1px solid ${COLOR.line}; padding-top: 20px; color: ${COLOR.muted}; font-family: ${FONT}; font-size: 12px; line-height: 1.6;">
                     All loan approvals, rates, and funding times depend on individual eligibility verification, bank authorization, and underwriting guidelines.
                     <br /><br />
-                    This is an automated email from LongLake Loans. Please do not reply to this email.
+                    This is an automated email from Path Loans. Please do not reply to this email.
                     <br />
-                    &copy; ${new Date().getFullYear()} LongLake Loans. All rights reserved.
+                    &copy; ${new Date().getFullYear()} Path Loans. All rights reserved.
                   </td>
                 </tr>
               </table>

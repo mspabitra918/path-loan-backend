@@ -44,7 +44,7 @@ router.post("/create-link-token", async (_req: Request, res: Response) => {
       user: {
         client_user_id: "Oakhill-loans-user",
       },
-      client_name: "LongLake Loans",
+      client_name: "Path Loans",
       products: [Products.Auth, Products.Transactions],
       language: "en",
       country_codes: [CountryCode.Us],

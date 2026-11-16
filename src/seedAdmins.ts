@@ -4,49 +4,49 @@ import { pool } from "./db";
 
 const admins = [
   // {
-  //   email: "sam@longlakeloans.com",
+  //   email: "sam@pathloans.com",
   //   password: "SaH_9jh#kLq-khgvX",
   //   name: "Sam",
   //   role: "reviewer",
   // },
   // {
-  //   email: "sophie@longlakeloans.com",
+  //   email: "sophie@pathloans.com",
   //   password: "SpH_982#kLq_07aX",
   //   name: "Sophie",
   //   role: "reviewer",
   // },
   // {
-  //   email: "max@longlakeloans.com",
+  //   email: "max@pathloans.com",
   //   password: "Mx_491$pWr_83zQ",
   //   name: "Max",
   //   role: "reviewer",
   // },
   // {
-  //   email: "james@longlakeloans.com",
+  //   email: "james@pathloans.com",
   //   password: "Jms_715#vRt_94kB",
   //   name: "James",
   //   role: "reviewer",
   // },
   // {
-  //   email: "jack@longlakeloans.com",
+  //   email: "jack@pathloans.com",
   //   password: "Jck_304$mXy_19pL",
   //   name: "Jack",
   //   role: "reviewer",
   // },
   // {
-  //   email: "alex@longlakeloans.com",
+  //   email: "alex@pathloans.com",
   //   password: "Alx_628#zKt_51wN",
   //   name: "Alex",
   //   role: "reviewer",
   // },
   // {
-  //   email: "kevin@longlakeloans.com",
+  //   email: "kevin@pathloans.com",
   //   password: "Kvn_159$bQr_42sM",
   //   name: "Kevin",
   //   role: "reviewer",
   // },
   // {
-  //   email: "angelina@longlakeloans.com",
+  //   email: "angelina@pathloans.com",
   //   password: "Ang_837#dLp_60vK",
   //   name: "Angelina",
   //   role: "reviewer",
@@ -70,13 +70,13 @@ const admins = [
     role: "reviewer",
   },
   // {
-  //   email: "admin@longlakeloans.com",
+  //   email: "admin@pathloans.com",
   //   password: "XhgdjhY_uuye6543",
   //   name: "Administrator",
   //   role: "admin",
   // },
   {
-    email: "david@longlakeloans.com",
+    email: "david@pathloans.com",
     password: "XhgdjhY_uuye6543",
     name: "David",
     role: "admin",

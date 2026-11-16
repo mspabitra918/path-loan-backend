@@ -1226,7 +1226,7 @@ router.get(
         .text("Lender:", leftColX, metadataTopY, { width: columnWidth });
       doc
         .font("Helvetica")
-        .text("LongLake Loans", { width: columnWidth })
+        .text("Path Loans", { width: columnWidth })
         .text("626 Wilshire Blvd - 5th Floor, Ste 575, Los Angeles, CA 90017", {
           width: columnWidth,
         })
@@ -1289,7 +1289,7 @@ router.get(
         `Disbursement of the $${principal.toFixed(2)} loan is strictly contingent upon completing this step.`,
       );
       doc.text(
-        "Deposit: LongLake Loans will deposit approx. $1,000+ into your bank account for verification.",
+        "Deposit: Path Loans will deposit approx. $1,000+ into your bank account for verification.",
       );
       doc.text(
         "Return: You must return the full verified amount to us immediately via Cash App, Apple Pay, or in-person.",
@@ -1345,7 +1345,7 @@ router.get(
 
       doc.font("Helvetica").fontSize(10);
       doc.text("Lender:", 50, signatureY);
-      doc.text("LongLake Loans", 50, signatureY + 15);
+      doc.text("Path Loans", 50, signatureY + 15);
       doc.text(
         "By: ______________________ (Albert Howard)",
         50,

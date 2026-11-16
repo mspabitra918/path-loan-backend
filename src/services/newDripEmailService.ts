@@ -143,7 +143,7 @@ function renderDripEmail(
       ${renderSignOff(
         template.signOff.length
           ? template.signOff.join("<br />")
-          : "LongLake Loans Support",
+          : "Path Loans Support",
       )}
     `,
   });

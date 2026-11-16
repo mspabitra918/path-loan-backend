@@ -1,5 +1,5 @@
 /**
- * OpenAPI spec for the LongLake Loans API, served by Swagger UI at /api/docs
+ * OpenAPI spec for the Path Loans API, served by Swagger UI at /api/docs
  * (raw JSON at /api/docs.json). Request bodies are generated from the same zod
  * schemas the routes validate with, so they can't drift from the code.
  *
@@ -86,7 +86,7 @@ const appId = pathParam("application_id", "5-digit application ID");
 export const openApiSpec = {
   openapi: "3.0.3",
   info: {
-    title: "LongLake Loans API",
+    title: "Path Loans API",
     version: "1.0.0",
     description:
       "Public endpoints power the applicant site; `/api/admin/*` endpoints power the admin portal.\n\n" +
@@ -150,7 +150,11 @@ export const openApiSpec = {
   },
   paths: {
     "/api/health": {
-      get: { tags: ["Health"], summary: "Health check", responses: { "200": ok() } },
+      get: {
+        tags: ["Health"],
+        summary: "Health check",
+        responses: { "200": ok() },
+      },
     },
 
     // ---------------------------------------------------------- applicant --
@@ -310,7 +314,10 @@ export const openApiSpec = {
           query("dateTo", "YYYY-MM-DD"),
           query("all", "`1` to skip the default date filter"),
           query("sortBy", undefined, { default: "created_at" }),
-          query("sortOrder", undefined, { enum: ["asc", "desc"], default: "desc" }),
+          query("sortOrder", undefined, {
+            enum: ["asc", "desc"],
+            default: "desc",
+          }),
           ...pagination,
         ],
         ...authed(),
@@ -358,7 +365,11 @@ export const openApiSpec = {
         responses: {
           "200": {
             description: "PDF file",
-            content: { "application/pdf": { schema: { type: "string", format: "binary" } } },
+            content: {
+              "application/pdf": {
+                schema: { type: "string", format: "binary" },
+              },
+            },
           },
           "404": { description: "Not found" },
           "500": { description: "Internal error" },

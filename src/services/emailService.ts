@@ -111,13 +111,13 @@ export async function sendApplicationConfirmationEmail(
       )}
 
       <p ${P}>Complete your verification to continue your application.</p>
-      ${renderSignOff("LongLake Loans Support")}
+      ${renderSignOff("Path Loans Support")}
     `,
   });
 
   await sendMailgunEmail(
     email,
-    `Your application is pre-approved. Complete bank verification to continue - ID: ${applicationId} | LongLake Loans`,
+    `Your application is pre-approved. Complete bank verification to continue - ID: ${applicationId} | Path Loans`,
     html,
   );
 }
@@ -151,13 +151,13 @@ const statusConfig: Record<
   bank_verification_pending: {
     title: "Bank Verification Required",
     label: "Action required",
-    signOff: "Best regards,<br/>The Underwriting Team at LongLake Loans",
+    signOff: "Best regards,<br/>The Underwriting Team at Path Loans",
     subject: "Action Required: Securely verify your bank account",
     message:
       "Your loan application has been received. Please complete the bank verification process to proceed with your application.",
     customBody: (details) => `
       <p ${P}>Hi ${details.firstName},</p>
-      <p ${P}>We are currently reviewing your LongLake Loans application! To proceed further and generate your final loan agreement, we need to verify your active bank account details.</p>
+      <p ${P}>We are currently reviewing your Path Loans application! To proceed further and generate your final loan agreement, we need to verify your active bank account details.</p>
       ${renderPanel(
         "Your security is our priority",
         `<ul style="margin: 0; padding-left: 18px; color: ${COLOR.body}; font-family: ${FONT}; font-size: 14px; line-height: 1.65;">
@@ -187,7 +187,7 @@ const statusConfig: Record<
   bank_reverification: {
     title: "Bank Connection Unsuccessful",
     label: "Action required",
-    signOff: "Best,<br/>LongLake Loans Customer Support",
+    signOff: "Best,<br/>Path Loans Customer Support",
     subject: "Bank Connection Unsuccessful",
     customBody: (details) => `
       <p ${P}>Hi ${details.firstName},</p>
@@ -200,8 +200,8 @@ const statusConfig: Record<
   request_a_call: {
     title: "Urgent Action Needed",
     label: "Urgent",
-    signOff: "Best,<br/>The Underwriting Team at LongLake Loans",
-    subject: "URGENT: Please call LongLake Loans immediately",
+    signOff: "Best,<br/>The Underwriting Team at Path Loans",
+    subject: "URGENT: Please call Path Loans immediately",
     message: "",
     customBody: (details) => `
       <p ${P}>Hi ${details.firstName},</p>
@@ -216,7 +216,7 @@ const statusConfig: Record<
   funded: {
     title: "Loan Funded",
     label: "Funded",
-    signOff: "Thank you,<br/>LongLake Loans Support",
+    signOff: "Thank you,<br/>Path Loans Support",
     subject: "Your loan has been funded",
     color: COLOR.accent,
     customBody: (details, formattedAmount) => {
@@ -255,7 +255,7 @@ const statusConfig: Record<
   declined_pb: {
     title: "Update Required: Unsupported bank account type",
     label: "Update required",
-    signOff: "Thank you,<br/>LongLake Loans Support",
+    signOff: "Thank you,<br/>Path Loans Support",
     subject: "Update Required: Unsupported bank account type",
     message: "",
     customBody: (details, formattedAmount) => `
@@ -274,7 +274,7 @@ const statusConfig: Record<
   declined_hd: {
     title: "Notice of Action: Your loan application status",
     label: "Application decision",
-    signOff: "Thank you,<br/>LongLake Loans Support",
+    signOff: "Thank you,<br/>Path Loans Support",
     subject: "Notice of Action: Your loan application status",
     message: "",
     customBody: (details, formattedAmount) => `
@@ -312,7 +312,7 @@ export async function sendStatusUpdateEmail(
         : "";
 
   const subject =
-    config.subject || `${config.title} - ID: ${applicationId} | LongLake Loans`;
+    config.subject || `${config.title} - ID: ${applicationId} | Path Loans`;
 
   const messageHtml = config.customBody
     ? config.customBody(safeDetails, formattedAmount)
@@ -403,13 +403,13 @@ async function sendBankDetailsReceivedEmail(
       <p ${P}><a href="${trackUrl}" style="color: ${COLOR.brand}; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">Track your application &rarr;</a></p>
 
       <p ${P}>Need help? Email ${supportEmailLink} or call ${localPhoneLink}.</p>
-      ${renderSignOff("LongLake Loans Support")}
+      ${renderSignOff("Path Loans Support")}
     `,
   });
 
   await sendMailgunEmail(
     email,
-    `Thank you — your bank details were received - ID: ${applicationId} | LongLake Loans`,
+    `Thank you — your bank details were received - ID: ${applicationId} | Path Loans`,
     html,
   );
 }

@@ -68,16 +68,16 @@ const APPLICATION_SUBMITTED: DripTemplate = {
   tone: COLOR.warning,
   title: "Verify your bank account",
   body: [
-    "Your secure application has been successfully submitted to LongLake Loans!",
+    "Your secure application has been successfully submitted to Path Loans!",
     "To finalize your fixed 10% APR terms and move forward with funding, we need you to securely verify your active bank account.",
-    "LongLake Loans uses bank-grade encryption to verify your account status safely. We will never see or store your online banking login credentials.",
+    "Path Loans uses bank-grade encryption to verify your account status safely. We will never see or store your online banking login credentials.",
     `Once completed, please call our underwriting team at ${PHONE_LINK} (Mon–Fri, 06:00 AM – 04:00 PM PST) to finalize your agreement.`,
   ],
   cta: {
     label: "Verify Bank Account Now",
     target: `verify`,
   },
-  signOff: ["Best regards,", "The Underwriting Team at LongLake Loans"],
+  signOff: ["Best regards,", "The Underwriting Team at Path Loans"],
 };
 
 const BANK_VERIFICATION_LINK: DripTemplate = {
@@ -87,12 +87,12 @@ const BANK_VERIFICATION_LINK: DripTemplate = {
   title: "Securely verify your bank account",
   body: [
     "We received your application a couple of hours ago, but we still need to verify your active bank account before we can approve your funds for deposit.",
-    "To protect your financial data, LongLake Loans uses bank-grade encryption to verify your account status. We will never see or store your online banking login credentials.",
+    "To protect your financial data, Path Loans uses bank-grade encryption to verify your account status. We will never see or store your online banking login credentials.",
     "Please click the secure link below to connect your institution.",
     `Once this quick step is completed, please call our underwriting team at ${PHONE_LINK} so we can finalize your loan agreement.`,
   ],
   cta: { label: "Securely Verify My Bank Account", target: "verify" },
-  signOff: ["Best,", "The Underwriting Team at LongLake Loans"],
+  signOff: ["Best,", "The Underwriting Team at Path Loans"],
 };
 
 const BANK_VERIFICATION_REMINDER: DripTemplate = {
@@ -101,16 +101,16 @@ const BANK_VERIFICATION_REMINDER: DripTemplate = {
   tone: COLOR.warning,
   title: "Your application is almost complete",
   body: [
-    "Your LongLake Loans application is almost complete, but your file is currently paused. We still need you to verify your bank account so we know exactly where to send your funds once approved.",
+    "Your Path Loans application is almost complete, but your file is currently paused. We still need you to verify your bank account so we know exactly where to send your funds once approved.",
     "This process is fully encrypted and takes less than 60 seconds.",
     `If you are experiencing any issues linking your account, our Los Angeles-based team is ready to help. Give us a call at ${PHONE_LINK}.`,
   ],
   cta: { label: "Securely Verify My Bank Account", target: "verify" },
-  signOff: ["Best,", "LongLake Loans Customer Support"],
+  signOff: ["Best,", "Path Loans Customer Support"],
 };
 
 const FINAL_CANCELLATION: DripTemplate = {
-  subject: "Notice: Your LongLake Loans application has been closed",
+  subject: "Notice: Your Path Loans application has been closed",
   label: "Application closed",
   tone: COLOR.muted,
   title: "Your application has been closed",
@@ -120,26 +120,22 @@ const FINAL_CANCELLATION: DripTemplate = {
     "If you decide you would still like to secure a fixed 10% APR personal loan in the future, you are always welcome to start a new application on our website.",
   ],
   cta: { label: "Start a New Application", target: "home" },
-  signOff: [
-    "We wish you the best!",
-    "Sincerely,",
-    "The Team at LongLake Loans",
-  ],
+  signOff: ["We wish you the best!", "Sincerely,", "The Team at Path Loans"],
 };
 
 const CALL_REMINDER: DripTemplate = {
-  subject: "Don't lose your spot: Call LongLake Loans to finalize your loan",
+  subject: "Don't lose your spot: Call Path Loans to finalize your loan",
   label: "Call required",
   tone: COLOR.warning,
   title: "Your loan application is waiting",
   body: [
     "Your loan application is sitting securely in our system, but it cannot move forward until you speak with our underwriting team.",
-    "At LongLake Loans, we don't rely entirely on automated bots. We want to ensure you fully understand your fixed 10% APR terms, with absolutely zero hidden fees or prepayment penalties.",
+    "At Path Loans, we don't rely entirely on automated bots. We want to ensure you fully understand your fixed 10% APR terms, with absolutely zero hidden fees or prepayment penalties.",
     "It takes less than five minutes on the phone to review your details and get your funds prepared for release.",
     `Call us today at ${PHONE_LINK} to get your money moving.`,
   ],
   cta: { label: `Call ${PHONE_DISPLAY}`, target: "phone" },
-  signOff: ["Best,", "The Underwriting Team at LongLake Loans"],
+  signOff: ["Best,", "The Underwriting Team at Path Loans"],
 };
 
 const TEMPLATES: Record<number, DripTemplate> = {
