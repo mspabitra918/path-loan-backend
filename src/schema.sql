@@ -1,5 +1,5 @@
 -- =============================================================================
--- Long Lake Loans — database schema
+-- Path Lake Loans — database schema
 -- Run with `npm run db:init`. Every statement is idempotent (IF NOT EXISTS),
 -- so re-running it on an existing database is safe.
 -- =============================================================================
