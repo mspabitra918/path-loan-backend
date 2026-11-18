@@ -45,6 +45,8 @@ app.use(
       "pathloans.com",
       process.env.FRONTEND_URL || "http://localhost:3000",
       "http://localhost:3001",
+      "https://path-loan-frontend.vercel.app",
+      "https://path-loan-admin-fe.vercel.app",
     ],
     credentials: true,
   }),
